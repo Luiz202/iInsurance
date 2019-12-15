@@ -4,10 +4,23 @@ import {
 	ScrollView,
 	StyleSheet,
 	View,
-	TouchableOpacity
+	TouchableOpacity,
+	Linking
 } from 'react-native';
 
 import Card from '../components/InsuranceCard';
+
+export default LinksScreen = () => {
+	return (
+		<View>
+			<Text> adsa </Text>
+		</View>
+	);
+};
+
+const shareToWhatsApp = text => {
+	Linking.openURL(`whatsapp://send?text=${text}`);
+};
 
 export default class LinksScreen extends Component {
 	render() {
@@ -41,6 +54,13 @@ export default class LinksScreen extends Component {
 							benefits={'teste teste teste teste'}
 							company={'teste teste'}
 						/>
+					</View>
+					<View>
+						<TouchableOpacity
+							onpress={() => shareToWhatsApp('TESTE')}
+						>
+							<Text> Compartilhar com amigos no whatsapp </Text>
+						</TouchableOpacity>
 					</View>
 				</View>
 			</ScrollView>

@@ -11,7 +11,7 @@ export default function HomeScreen() {
 	);
 }
 
-/* import React, { Component } from 'react';
+import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 import {
 	Container,
@@ -36,11 +36,10 @@ export default class HomeScreen extends Component {
 						<Input placeholder='Password' />
 					</Item>
 				</Form>
-				
 			</View>
 		);
 	}
-} */
+}
 
 HomeScreen.navigationOptions = {
 	title: 'Planos de Seguro'
