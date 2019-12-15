@@ -1,27 +1,59 @@
-import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
-import { ExpoLinksView } from '@expo/samples';
+import React, { Component } from 'react';
+import {
+	Text,
+	ScrollView,
+	StyleSheet,
+	View,
+	TouchableOpacity
+} from 'react-native';
 
-export default function LinksScreen() {
-  return (
-    <ScrollView style={styles.container}>
-      {/**
-       * Go ahead and delete ExpoLinksView and replace it with your content;
-       * we just wanted to provide you with some helpful links.
-       */}
-      <ExpoLinksView />
-    </ScrollView>
-  );
+import Card from '../components/InsuranceCard';
+
+export default class LinksScreen extends Component {
+	render() {
+		return (
+			<ScrollView>
+				<View style={{ flexDirection: 'column' }}>
+					<View style={styles.row}>
+						<Card
+							position={'cardPositionRight'}
+							title={'Teste'}
+							benefits={'teste teste teste teste'}
+							company={'teste teste'}
+						/>
+						<Card
+							position={'cardPositionRight'}
+							title={'Teste'}
+							benefits={'teste teste teste teste'}
+							company={'teste teste'}
+						/>
+					</View>
+					<View style={styles.row}>
+						<Card
+							position={'cardPositionRight'}
+							title={'Teste'}
+							benefits={'teste teste teste teste'}
+							company={'teste teste'}
+						/>
+						<Card
+							position={'cardPositionRight'}
+							title={'Teste'}
+							benefits={'teste teste teste teste'}
+							company={'teste teste'}
+						/>
+					</View>
+				</View>
+			</ScrollView>
+		);
+	}
 }
 
 LinksScreen.navigationOptions = {
-  title: 'Links',
+	title: 'Planos de Seguro'
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 15,
-    backgroundColor: '#fff',
-  },
+styles = StyleSheet.create({
+	row: {
+		flexDirection: 'row'
+	}
 });
